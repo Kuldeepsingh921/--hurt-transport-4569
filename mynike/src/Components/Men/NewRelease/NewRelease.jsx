@@ -1,6 +1,7 @@
 import { useEffect,useState } from "react";
-import {Grid,GridItem,Select,Box,Link,Flex,Text,Divider, Checkbox
+import {Grid,GridItem,Select,Box,Flex,Text,Divider, Checkbox
 } from "@chakra-ui/react"
+import {Link} from "react-router-dom"
 import ProductCard from "./ProductCard";
 import Footer from "../../Footer";
 
@@ -84,9 +85,11 @@ const handleSorting=(e)=>{
           width="95%"
           > 
         {item.map((el)=>
-        <Link textDecoration="none">
-        <GridItem key={el.title}>
+        
+        <GridItem key={el.id}>
+          <Link to={`/productdetails/${el.id}`}>
          <ProductCard
+          id={el.id}
           title={el.title}
           price={el.price}
           tag={el.tag}
@@ -94,9 +97,9 @@ const handleSorting=(e)=>{
           category={el.category}
           color={el.color}
           />
-         
-         </GridItem>  
          </Link>
+         </GridItem>  
+        
         )}
          </Grid>
          </Flex>

@@ -12,7 +12,8 @@ function LandingPage(){
             height:"60px",
             backgroundColor:"white",
             display:"flex",
-            justifyContent:"space-around"
+            justifyContent:"space-around",
+            marginTop:"30px"
         }}>
              <Box>
              <h1>Save Upto 40%</h1>
@@ -170,7 +171,7 @@ function LandingPage(){
                 
             </Box>
         </Box>
-        <Box style={{display:"flex",gap:"5px",marginTop:"200px",height:"350px",width:"60%",margin:'auto'}}>
+        <Box style={{display:"flex",gap:"5px",marginTop:"100px",height:"350px",width:"60%",margin:'auto'}}>
               <Box style={{width:"30%",lineHeight:"35px", }}>
                 <h1 style={{color:"#111",fontSize:"20px"}}>Icons</h1>
                 <Box style={{color:"gray"}} >
@@ -224,7 +225,9 @@ function LandingPage(){
                 </Box>
               </Box>
         </Box>
-        <Footer marginTop="50px" />
+        <Box>
+        <Footer />
+        </Box>
         </>
     )
 }

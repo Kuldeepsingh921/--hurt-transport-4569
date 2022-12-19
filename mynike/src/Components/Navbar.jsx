@@ -2,26 +2,13 @@ import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Link,
   useColorModeValue,
   Stack,
   Text,
 } from '@chakra-ui/react';
+import {Link} from "react-router-dom"
 
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
 
 export default function Navbar1() {
 //   color: #111;
@@ -39,9 +26,9 @@ export default function Navbar1() {
              <Text>|</Text>
              <Text _hover={{color:"gray"}}>Help</Text>
              <Text>|</Text>
-             <Text _hover={{color:"gray"}}>Join Us</Text>
+             <Link to={`/signup`}><Text _hover={{color:"gray"}}>Join Us</Text></Link>
              <Text>|</Text>
-             <Text _hover={{color:"gray"}}>Sign In</Text>
+             <Link to={`/signin`}><Text _hover={{color:"gray"}}>Sign In</Text></Link>
              
             </Stack>
           </Flex>

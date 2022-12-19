@@ -11,11 +11,12 @@ import {
   } from '@chakra-ui/react';
   
   
-  export default function ProductCard({title,price,tag,image,category,color,}) {
+  export default function ProductCard({title,price,tag,image,category,color,id}) {
     return (
       
       <Center py={12}>
-        <Box
+        
+        <Box 
           role={'group'}
           p={6}
           maxW={'330px'}
@@ -73,7 +74,7 @@ import {
             </Stack>
           </Stack>
         </Box>
-        
+       
       </Center>
      
     );
